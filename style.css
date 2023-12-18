@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #fff;
+    --font-color: #323238;
+    --bg-assets: #E1E1E6;
+    --bg-assets-rain: #02799D; 
+
+
+    font-size: clamp(40%, 1% + 2vw, 62.5%)
+}
+
+.sr-only {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    overflow: hidden;
+
+    margin: -1px;
+    padding: 0px;
+    border: 0;
+    appearance: none;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    display: grid;
+    height: 100vh;
+    place-content: center;
+}
+
+#app {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#app-timer {
+    display: grid;
+    justify-items: center;
+    padding: 0 15rem 0 0;
+} 
+
+.flex {
+    display: flex;
+    align-items: center;
+    margin: 3rem;   
+}
+
+
+#timer {
+    font-size: 10rem;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: -2rem;
+}
+
+#timer-controls button {
+    background-color: transparent;
+    border: 0; 
+    color: var(--primary-color);
+ 
+    cursor: pointer;
+ 
+    font-size: 5rem;
+    margin: .8rem;
+    
+
+}
+
+#sounds-controls {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2.5rem;
+}
+
+#sounds-controls button {
+    width: 100%; 
+    margin: 0 auto;
+    padding: 2.5rem;
+}
+.default {
+    background-color: var(--bg-assets);
+    color: var(--primary-color);
+
+    border: 0;
+    padding: 3.5rem;
+    cursor: pointer;
+    font-size: 6.4rem;
+    border-radius: 2rem;
+    gap: 2rem;   
+}
+
+.rain {
+    background-color: var(--bg-assets-rain);
+    padding: 3.5rem;
+    border: 0;
+    cursor: pointer;
+    font-size: 6.4rem;
+    border-radius: 2rem;
+}
+
+.running .ph-play-circle,
+.running .ph-timer,
+html:not(.running) .ph-pause-circle,
+html:not(.running) .ph-stop-circle {
+    display: none;
+}
+
+
